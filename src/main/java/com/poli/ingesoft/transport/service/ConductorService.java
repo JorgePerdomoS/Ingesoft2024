@@ -1,6 +1,7 @@
 package com.poli.ingesoft.transport.service;
 
 import com.poli.ingesoft.transport.domain.Conductor;
+import com.poli.ingesoft.transport.domain.Reporte;
 import org.springframework.stereotype.Service;
 
 /**
@@ -29,9 +30,9 @@ public interface ConductorService {
     /**
      * Reporta la entrega realizada por el conductor.
      * Este método debería incluir la lógica necesaria para actualizar el estado
-     * de la entrega o generar un reporte de la misma.
+     * de la entrega.
      */
-    void reportarEntrega();
+    void generarReporte(Reporte reporte);
 
     /**
      * Consulta la ruta asignada al conductor.

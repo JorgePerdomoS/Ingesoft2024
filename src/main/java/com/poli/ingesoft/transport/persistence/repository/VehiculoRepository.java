@@ -4,6 +4,8 @@ import com.poli.ingesoft.transport.persistence.mongo.VehiculoDocument;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 /**
  * Repositorio para realizar operaciones CRUD en la colección de vehículos en MongoDB.
  *
@@ -12,4 +14,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface VehiculoRepository extends MongoRepository<VehiculoDocument, String> {
+
+    Optional<VehiculoDocument> findByPlaca(String placa);
 }

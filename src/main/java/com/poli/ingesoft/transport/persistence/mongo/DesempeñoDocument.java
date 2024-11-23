@@ -10,9 +10,11 @@ import java.util.List;
 public class DesempeñoDocument {
 
     private String id;
-    private ConductorDocument conductor;
+    private String conductorId;
     private double calificacion;
+    //metodo
     private List<String> historialEvaluaciones;
 
-    public void evaluarDesempeño(){}
+    public void evaluarDesempeño() {
+    }
 }

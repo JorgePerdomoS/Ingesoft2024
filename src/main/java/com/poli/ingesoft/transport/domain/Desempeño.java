@@ -8,8 +8,9 @@ import java.util.List;
 public class Desempeño {
 
     private String id;
-    private Conductor conductor;
+    private String conductorId;
     private double calificacion;
+    //metodo
     private List<String> historialEvaluaciones;
 
     public void evaluarDesempeño(){}

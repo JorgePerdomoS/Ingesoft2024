@@ -8,7 +8,11 @@ import java.util.List;
 public class Conductor {
     private String id;
     private String nombre;
-    private List<Desempeño> evaluaciones;
+    private String rol;
+    private String contraseña;
+    private String nombreUsuario;
+    private String documento;
+    private Double calificacion;
 
     public void reportarEntrega(){}
     public void consultarRuta(){}

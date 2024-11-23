@@ -8,6 +8,7 @@ import java.util.List;
 public class Vehiculo {
 
     private String id;
+    private String placa;
     private String modelo;
     private String tipo;
     private Double capacidadCarga;

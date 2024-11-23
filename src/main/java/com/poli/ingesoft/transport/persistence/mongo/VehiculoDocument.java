@@ -10,6 +10,7 @@ import java.util.List;
 public class VehiculoDocument {
 
     private String id;
+    private String placa;
     private String modelo;
     private String tipo;
     private Double capacidadCarga;

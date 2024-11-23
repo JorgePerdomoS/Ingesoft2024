@@ -8,9 +8,14 @@ import java.util.List;
 @Data
 @Document
 public class ConductorDocument {
+
     private String id;
     private String nombre;
-    private List<DesempeñoDocument> evaluaciones;
+    private String rol;
+    private String contraseña;
+    private String nombreUsuario;
+    private String documento;
+    private Double calificacion;
 
     public void reportarEntrega(){}
     public void consultarRuta(){}

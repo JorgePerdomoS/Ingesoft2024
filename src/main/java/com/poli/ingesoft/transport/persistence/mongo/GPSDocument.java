@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class GPSDocument {
 
     private String id;
+    private String placaVehiculo;
     private String ubicacion;
 
 

@@ -30,10 +30,10 @@ public interface VehiculoService {
     /**
      * Obtiene los detalles de un vehículo específico en función de su identificador.
      *
-     * @param idVehiculo el identificador único del vehículo.
+     * @param placa el identificador único del vehículo.
      * @return la instancia de {@link Vehiculo} que coincide con el ID proporcionado.
      */
-    Vehiculo obtenerVehiculo(String idVehiculo);
+    Vehiculo obtenerVehiculo(String placa);
 
     /**
      * Guarda o actualiza la información de un vehículo en el sistema.
