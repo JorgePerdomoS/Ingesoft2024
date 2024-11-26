@@ -1,6 +1,8 @@
 package com.poli.ingesoft.transport.controller;
 
 import com.poli.ingesoft.transport.domain.Emergencia;
+import com.poli.ingesoft.transport.service.EmergenciaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/emergencia")
 public class EmergenciaController {
+
+    private final EmergenciaService emergenciaService;
+
+    @Autowired
+    public EmergenciaController(EmergenciaService emergenciaService){
+        this.emergenciaService = emergenciaService;
+    }
 
     /**
      * Obtiene la emergencia por su identificador.
@@ -37,7 +46,7 @@ public class EmergenciaController {
      *         o un código de error si la operación falla.
      */
     @PostMapping("/reportarEmergencia")
-    public ResponseEntity<Void> reportarEmergencia(Emergencia emergencia) {
+    public ResponseEntity<Integer> reportarEmergencia(Emergencia emergencia) {
         return null;
     }
 }

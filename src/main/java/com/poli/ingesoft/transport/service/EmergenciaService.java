@@ -12,13 +12,6 @@ import org.springframework.stereotype.Service;
 public interface EmergenciaService {
 
     /**
-     * Reporta una nueva emergencia en el sistema.
-     * Este método debería incluir la lógica necesaria para registrar una emergencia
-     * y tomar las acciones correspondientes (como enviar alertas o notificaciones).
-     */
-    void reportarEmergencia();
-
-    /**
      * Obtiene los detalles de una emergencia específica en función de su identificador.
      *
      * @param emergenciaId el identificador único de la emergencia.
@@ -31,5 +24,5 @@ public interface EmergenciaService {
      *
      * @param emergencia la instancia de {@link Emergencia} que se debe guardar o actualizar.
      */
-    void guardarEmergencia(Emergencia emergencia);
+    String guardarEmergencia(Emergencia emergencia);
 }

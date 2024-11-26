@@ -12,20 +12,6 @@ import org.springframework.stereotype.Service;
 public interface ViajeService {
 
     /**
-     * Inicia un viaje en el sistema.
-     * Este método debería incluir la lógica necesaria para registrar el inicio del viaje,
-     * como la hora de salida, el vehículo y el conductor asignado.
-     */
-    void iniciarViaje();
-
-    /**
-     * Finaliza un viaje en el sistema.
-     * Este método registra la conclusión del viaje, incluyendo la hora de llegada
-     * y cualquier información adicional relevante para cerrar el viaje.
-     */
-    void finalizarViaje();
-
-    /**
      * Obtiene los detalles de un viaje específico en función de su identificador.
      *
      * @param viajeId el identificador único del viaje.
@@ -38,5 +24,5 @@ public interface ViajeService {
      *
      * @param viaje la instancia de {@link Viaje} que se debe guardar o actualizar.
      */
-    void guardarViaje(Viaje viaje);
+    String guardarViaje(Viaje viaje);
 }

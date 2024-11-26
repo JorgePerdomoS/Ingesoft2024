@@ -13,7 +13,4 @@ public class ViajeDocument {
     private String ruta;
     private String detalles;
 
-    public void iniciarViaje(){}
-    public void finalizarViaje(){}
-
 }

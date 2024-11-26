@@ -11,14 +11,6 @@ import org.springframework.stereotype.Service;
 public interface ReporteService {
 
     /**
-     * Genera un nuevo reporte en el sistema.
-     * Este método debería incluir la lógica necesaria para recopilar los datos pertinentes
-     * y crear un informe, que puede ser sobre el desempeño, entregas, o cualquier otra
-     * actividad relacionada con el sistema de transporte.
-     */
-    void generarReporte();
-
-    /**
      * Obtiene los detalles de un reporte específico en función de su identificador.
      *
      * @param reporteId el identificador único del reporte.
@@ -31,5 +23,5 @@ public interface ReporteService {
      *
      * @param reporte la instancia de {@link Reporte} que se debe guardar o actualizar.
      */
-    void guardarReporte(Reporte reporte);
+    String guardarReporte(Reporte reporte);
 }

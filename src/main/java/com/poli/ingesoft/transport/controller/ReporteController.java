@@ -1,11 +1,10 @@
 package com.poli.ingesoft.transport.controller;
 
 import com.poli.ingesoft.transport.domain.Reporte;
+import com.poli.ingesoft.transport.service.ReporteService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Controlador para gestionar las operaciones relacionadas con reportes.
@@ -17,6 +16,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/reporte")
 public class ReporteController {
 
+    private final ReporteService reporteService;
+
+    @Autowired
+    public ReporteController(ReporteService reporteService) {
+        this.reporteService = reporteService;
+    }
+
     /**
      * Obtiene un reporte por su identificador.
      *
@@ -24,9 +30,13 @@ public class ReporteController {
      * @return Una respuesta que contiene el reporte solicitado en caso de éxito,
      *         o un código de error si no se encuentra el reporte.
      */
-    @GetMapping("/obtenerReporte")
-    public ResponseEntity<Reporte> obtenerReporte(String id) {
-        return null;
+    @GetMapping("/obtenerReporte/{id}")
+    public ResponseEntity<Reporte> obtenerReporte(@PathVariable String id) {
+        Reporte resp = reporteService.obtenerReporte(id);
+        if (resp != null) {
+            return ResponseEntity.ok(resp);
+        }
+        return ResponseEntity.notFound().build();
     }
 
     /**
@@ -37,7 +47,8 @@ public class ReporteController {
      *         o un código de error si la operación falla.
      */
     @PostMapping("/generarReporte")
-    public ResponseEntity<Void> generarReporte(Reporte reporte) {
-        return null;
+    public ResponseEntity<String> generarReporte(@RequestBody Reporte reporte) {
+       String response = reporteService.guardarReporte(reporte);
+       return ResponseEntity.ok(response);
     }
 }

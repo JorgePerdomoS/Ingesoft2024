@@ -11,7 +11,4 @@ public class SensorDocument {
     private String tipo;
     private Double valor;
 
-    public Double leerValor() {
-        return valor;
-    }
 }

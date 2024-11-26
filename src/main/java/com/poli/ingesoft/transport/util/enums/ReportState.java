@@ -5,13 +5,13 @@ import lombok.Getter;
 @Getter
 public enum ReportState {
 
-    ENTREGA(1),
-    RECEPCION(2),
-    EMERGENCIA(3);
+    ENTREGA("ENTREGA"),
+    RECEPCION("RECEPCION"),
+    EMERGENCIA("EMERGENCIA"),;
 
-    final Integer value;
+    final String value;
 
-    ReportState(Integer value) {
+    ReportState(String value) {
         this.value = value;
     }
 }

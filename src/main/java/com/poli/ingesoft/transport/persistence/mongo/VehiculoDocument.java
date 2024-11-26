@@ -16,6 +16,4 @@ public class VehiculoDocument {
     private Double capacidadCarga;
     private List<SensorDocument> sensoresConfig;
 
-    public void actualizarUbicacion(){}
-    public void reportarEstado(){}
 }

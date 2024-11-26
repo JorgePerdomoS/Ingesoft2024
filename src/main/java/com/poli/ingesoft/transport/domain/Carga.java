@@ -7,9 +7,11 @@ import java.util.List;
 @Data
 public class Carga {
 
-    private String id;
     private String descripcion;
     private String estado;
-    private List<String> historial;
+    private String temperatura;
+    private String conductor;
+    private boolean recepcionado;
+    private String direccion;
 
 }

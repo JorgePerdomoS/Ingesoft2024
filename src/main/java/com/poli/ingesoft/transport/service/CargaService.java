@@ -3,6 +3,8 @@ package com.poli.ingesoft.transport.service;
 import com.poli.ingesoft.transport.domain.Carga;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Interface que define los servicios relacionados con la gestión de cargas en el sistema de transporte.
  * Proporciona métodos para actualizar el estado de una carga, verificar si ha llegado al punto de entrega,
@@ -14,29 +16,24 @@ public interface CargaService {
     /**
      * Actualiza el estado de una carga.
      *
-     * @param estado el nuevo estado de la carga (puede ser "En tránsito", "Entregado", etc.).
+     * @param idCarga el id generado al guardarse en base de datos
      */
-    void actualizarEstado(String estado);
+    Integer actualizarEstado(String idCarga);
 
-    /**
-     * Verifica si la carga ha llegado al punto de entrega.
-     * Este método debería incluir la lógica necesaria para determinar si la carga
-     * ha alcanzado su destino final.
-     */
-    void verificarEnPuntoEntrega();
 
     /**
      * Obtiene una carga específica en función de su identificador.
      *
-     * @param id el identificador único de la carga.
      * @return la instancia de {@link Carga} que coincide con el ID proporcionado.
      */
-    Carga obtenerCarga(String id);
+    List<Carga> obtenerCargas();
 
     /**
      * Guarda o persiste una instancia de carga en el sistema.
      *
      * @param carga la instancia de {@link Carga} que se debe guardar.
+     *
+     * @return retorna un estado siendo 1 OK
      */
-    void guardarCarga(Carga carga);
+    String guardarCarga(Carga carga);
 }

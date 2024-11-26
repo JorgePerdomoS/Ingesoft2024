@@ -7,6 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @Document
 public class ReporteDocument {
+
     private String id;
     private ReportState tipoReporte;
     private String descripcionReporte;

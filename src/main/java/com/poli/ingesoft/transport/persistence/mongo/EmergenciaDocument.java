@@ -13,6 +13,4 @@ public class EmergenciaDocument {
     private VehiculoDocument vehiculo;
     private String tipoEmergencia;
     private List<SensorDocument> datosSensor;
-
-    public void reportarEmergencia() {}
 }

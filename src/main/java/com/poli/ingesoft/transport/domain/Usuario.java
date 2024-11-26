@@ -2,11 +2,9 @@ package com.poli.ingesoft.transport.domain;
 
 import lombok.Data;
 
-import java.util.List;
-
 @Data
-public class Conductor {
-    private String id;
+public class Usuario {
+
     private String nombre;
     private String rol;
     private String contraseña;
@@ -14,6 +12,4 @@ public class Conductor {
     private String documento;
     private Double calificacion;
 
-    public void reportarEntrega(){}
-    public void consultarRuta(){}
 }

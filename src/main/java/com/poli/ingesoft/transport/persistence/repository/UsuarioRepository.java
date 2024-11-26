@@ -1,6 +1,6 @@
 package com.poli.ingesoft.transport.persistence.repository;
 
-import com.poli.ingesoft.transport.persistence.mongo.ConductorDocument;
+import com.poli.ingesoft.transport.persistence.mongo.UsuarioDocument;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,7 +13,7 @@ import java.util.Optional;
  * para acceder y manipular documentos de conductores.
  */
 @Repository
-public interface ConductorRepository extends MongoRepository<ConductorDocument, String> {
+public interface UsuarioRepository extends MongoRepository<UsuarioDocument, String> {
 
-    Optional<ConductorDocument> findByDocumento(String documento);
+    Optional<UsuarioDocument> findByDocumento(String documento);
 }

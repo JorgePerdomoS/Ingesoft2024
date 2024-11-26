@@ -1,8 +1,10 @@
 package com.poli.ingesoft.transport.service;
 
-import com.poli.ingesoft.transport.domain.Conductor;
+import com.poli.ingesoft.transport.domain.Usuario;
 import com.poli.ingesoft.transport.domain.Reporte;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * Interface que define los servicios relacionados con la gestión de conductores en el sistema de transporte.
@@ -10,22 +12,22 @@ import org.springframework.stereotype.Service;
  * reportar entregas realizadas y consultar rutas asignadas.
  */
 @Service
-public interface ConductorService {
+public interface UsuarioService {
 
     /**
      * Obtiene los detalles de un conductor en función de su identificador.
      *
      * @param idConductor el identificador único del conductor.
-     * @return la instancia de {@link Conductor} que coincide con el ID proporcionado.
+     * @return la instancia de {@link Usuario} que coincide con el ID proporcionado.
      */
-    Conductor obtenerConductor(String idConductor);
+    Usuario obtenerConductor(String idConductor);
 
     /**
      * Guarda o persiste una instancia de conductor en el sistema.
      *
-     * @param conductor la instancia de {@link Conductor} que se debe guardar.
+     * @param usuario la instancia de {@link Usuario} que se debe guardar.
      */
-    void guardarConductor(Conductor conductor);
+    Integer guardarConductor(Usuario usuario);
 
     /**
      * Reporta la entrega realizada por el conductor.
@@ -34,10 +36,7 @@ public interface ConductorService {
      */
     void generarReporte(Reporte reporte);
 
-    /**
-     * Consulta la ruta asignada al conductor.
-     * Este método debería obtener y mostrar la información relacionada con la
-     * ruta que debe seguir el conductor para realizar sus entregas.
-     */
-    void consultarRuta();
+
+    List<Usuario> obtenerUsuarios();
+
 }

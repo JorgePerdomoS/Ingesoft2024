@@ -3,6 +3,8 @@ package com.poli.ingesoft.transport.service;
 import com.poli.ingesoft.transport.domain.Vehiculo;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Interface que define los servicios relacionados con la gestión de vehículos
  * en el sistema de transporte. Proporciona métodos para actualizar la ubicación
@@ -40,5 +42,15 @@ public interface VehiculoService {
      *
      * @param vehiculo la instancia de {@link Vehiculo} que se debe guardar o actualizar.
      */
-    void guardarVehiculo(Vehiculo vehiculo);
+    Integer guardarVehiculo(Vehiculo vehiculo);
+
+    /**
+     * Obtiene la lista completa de vehículos almacenados en el sistema.
+     * Este método se utiliza para recuperar todos los vehículos registrados en el sistema. Los datos
+     * obtenidos pueden incluir información como marca, modelo, año, estado, y más.
+     *
+     * @return Una lista de objetos {@link Vehiculo} que representa todos los vehículos registrados.
+     *         Si no hay vehículos registrados, se devuelve una lista vacía.
+     */
+    List<Vehiculo> obtenerVehiculos();
 }
